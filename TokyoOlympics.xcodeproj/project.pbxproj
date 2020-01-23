@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8B3EEA2623D6C33300F70162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA2523D6C33300F70162 /* AppDelegate.m */; };
 		8B3EEA2923D6C33300F70162 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA2823D6C33300F70162 /* SceneDelegate.m */; };
-		8B3EEA2C23D6C33300F70162 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA2B23D6C33300F70162 /* ViewController.m */; };
 		8B3EEA2F23D6C33300F70162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3EEA2D23D6C33300F70162 /* Main.storyboard */; };
 		8B3EEA3123D6C33500F70162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3EEA3023D6C33500F70162 /* Assets.xcassets */; };
 		8B3EEA3423D6C33500F70162 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3EEA3223D6C33500F70162 /* LaunchScreen.storyboard */; };
@@ -23,6 +22,12 @@
 		8B3EEA5223D8905900F70162 /* BaseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA5123D8905900F70162 /* BaseDAO.m */; };
 		8B3EEA5523D9336400F70162 /* EventsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA5423D9336400F70162 /* EventsDAO.m */; };
 		8B3EEA5823D9342F00F70162 /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA5723D9342F00F70162 /* ScheduleDAO.m */; };
+		8B3EEAAD23D97FE300F70162 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAAC23D97FE300F70162 /* HomeViewController.m */; };
+		8B3EEAB423D9871100F70162 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAB323D9871100F70162 /* ScheduleViewController.m */; };
+		8B3EEABA23D98D1E00F70162 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAB923D98D1E00F70162 /* EventsViewController.m */; };
+		8B3EEABD23D98D3300F70162 /* EventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEABC23D98D3300F70162 /* EventsDetailViewController.m */; };
+		8B3EEAC023D98EB300F70162 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEABF23D98EB300F70162 /* CountDownViewController.m */; };
+		8B3EEAC323D98EBE00F70162 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAC223D98EBE00F70162 /* AboutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +36,6 @@
 		8B3EEA2523D6C33300F70162 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8B3EEA2723D6C33300F70162 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		8B3EEA2823D6C33300F70162 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		8B3EEA2A23D6C33300F70162 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B3EEA2B23D6C33300F70162 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B3EEA2E23D6C33300F70162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B3EEA3023D6C33500F70162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3EEA3323D6C33500F70162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,18 @@
 		8B3EEA5423D9336400F70162 /* EventsDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsDAO.m; sourceTree = "<group>"; };
 		8B3EEA5623D9342F00F70162 /* ScheduleDAO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleDAO.h; sourceTree = "<group>"; };
 		8B3EEA5723D9342F00F70162 /* ScheduleDAO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleDAO.m; sourceTree = "<group>"; };
+		8B3EEAAB23D97FE300F70162 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8B3EEAAC23D97FE300F70162 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8B3EEAB223D9871100F70162 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
+		8B3EEAB323D9871100F70162 /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
+		8B3EEAB823D98D1E00F70162 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		8B3EEAB923D98D1E00F70162 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		8B3EEABB23D98D3300F70162 /* EventsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsDetailViewController.h; sourceTree = "<group>"; };
+		8B3EEABC23D98D3300F70162 /* EventsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsDetailViewController.m; sourceTree = "<group>"; };
+		8B3EEABE23D98EB300F70162 /* CountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		8B3EEABF23D98EB300F70162 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
+		8B3EEAC123D98EBE00F70162 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		8B3EEAC223D98EBE00F70162 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +105,15 @@
 		8B3EEA2323D6C33300F70162 /* TokyoOlympics */ = {
 			isa = PBXGroup;
 			children = (
+				8B3EEAB123D9864E00F70162 /* About */,
+				8B3EEAB023D9864200F70162 /* CountDown */,
+				8B3EEAAF23D9863200F70162 /* Schedule */,
+				8B3EEAAE23D9861700F70162 /* Events */,
+				8B3EEAAA23D97FC900F70162 /* Home */,
 				8B3EEA2423D6C33300F70162 /* AppDelegate.h */,
 				8B3EEA2523D6C33300F70162 /* AppDelegate.m */,
 				8B3EEA2723D6C33300F70162 /* SceneDelegate.h */,
 				8B3EEA2823D6C33300F70162 /* SceneDelegate.m */,
-				8B3EEA2A23D6C33300F70162 /* ViewController.h */,
-				8B3EEA2B23D6C33300F70162 /* ViewController.m */,
 				8B3EEA2D23D6C33300F70162 /* Main.storyboard */,
 				8B3EEA3023D6C33500F70162 /* Assets.xcassets */,
 				8B3EEA3223D6C33500F70162 /* LaunchScreen.storyboard */,
@@ -146,6 +164,53 @@
 				8B3EEA5723D9342F00F70162 /* ScheduleDAO.m */,
 			);
 			path = DAO;
+			sourceTree = "<group>";
+		};
+		8B3EEAAA23D97FC900F70162 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B3EEAAB23D97FE300F70162 /* HomeViewController.h */,
+				8B3EEAAC23D97FE300F70162 /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B3EEAAE23D9861700F70162 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8B3EEAB823D98D1E00F70162 /* EventsViewController.h */,
+				8B3EEAB923D98D1E00F70162 /* EventsViewController.m */,
+				8B3EEABB23D98D3300F70162 /* EventsDetailViewController.h */,
+				8B3EEABC23D98D3300F70162 /* EventsDetailViewController.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8B3EEAAF23D9863200F70162 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				8B3EEAB223D9871100F70162 /* ScheduleViewController.h */,
+				8B3EEAB323D9871100F70162 /* ScheduleViewController.m */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		8B3EEAB023D9864200F70162 /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				8B3EEABE23D98EB300F70162 /* CountDownViewController.h */,
+				8B3EEABF23D98EB300F70162 /* CountDownViewController.m */,
+			);
+			path = CountDown;
+			sourceTree = "<group>";
+		};
+		8B3EEAB123D9864E00F70162 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				8B3EEAC123D98EBE00F70162 /* AboutViewController.h */,
+				8B3EEAC223D98EBE00F70162 /* AboutViewController.m */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,13 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3EEABD23D98D3300F70162 /* EventsDetailViewController.m in Sources */,
 				8B3EEA4B23D7E75700F70162 /* Schedule.m in Sources */,
+				8B3EEABA23D98D1E00F70162 /* EventsViewController.m in Sources */,
+				8B3EEAB423D9871100F70162 /* ScheduleViewController.m in Sources */,
 				8B3EEA5523D9336400F70162 /* EventsDAO.m in Sources */,
-				8B3EEA2C23D6C33300F70162 /* ViewController.m in Sources */,
 				8B3EEA2623D6C33300F70162 /* AppDelegate.m in Sources */,
+				8B3EEAC323D98EBE00F70162 /* AboutViewController.m in Sources */,
+				8B3EEAAD23D97FE300F70162 /* HomeViewController.m in Sources */,
 				8B3EEA5223D8905900F70162 /* BaseDAO.m in Sources */,
 				8B3EEA4823D7E66D00F70162 /* Events.m in Sources */,
 				8B3EEA3723D6C33500F70162 /* main.m in Sources */,
+				8B3EEAC023D98EB300F70162 /* CountDownViewController.m in Sources */,
 				8B3EEA5823D9342F00F70162 /* ScheduleDAO.m in Sources */,
 				8B3EEA4F23D7E93300F70162 /* DBHelper.m in Sources */,
 				8B3EEA2923D6C33300F70162 /* SceneDelegate.m in Sources */,
