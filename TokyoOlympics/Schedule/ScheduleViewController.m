@@ -7,9 +7,12 @@
 //
 
 #import "ScheduleViewController.h"
-
+#import "EventsDetailViewController.h"
+#import "ScheduleDAO.h"
+#import "EventsDAO.h"
 @interface ScheduleViewController ()
-
+@property(nonatomic,strong)NSDictionary *data;
+@property(strong,nonatomic)NSArray *arrayGameList;
 @end
 
 @implementation ScheduleViewController
@@ -23,6 +26,46 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)initWithData
+{
+    if(self.data==nil||[self.data count]==0)
+    {
+        self.data=[self readData];
+        NSArray *keys=[self.data allKeys];
+        self.arrayGameList=[keys sortedArrayUsingSelector:@selector(compare:)];
+    }
+}
+-(NSMutableDictionary *)readData
+{
+    
+    ScheduleDAO *scheduledao=[ScheduleDAO shareInstance];
+    NSMutableArray *schedules=[scheduledao findAll];
+    NSMutableDictionary *resDict=[[NSMutableDictionary alloc]init];
+    EventsDAO *eventsdao=[EventsDAO sharedInstance];
+    //延迟数据加载
+    for(Schedule *schedule in schedules)
+    {
+        Events *event=[eventsdao findById:schedule.Events];
+        schedule.Events=event;
+        NSArray *allkey=[resDict allKeys];
+        
+        //数据转换
+        if([allkey containsObject:schedule.GameDate])
+        {
+            NSMutableArray *value=resDict[schedule.GameDate];
+            [value addObject:schedule];
+        }
+        else{
+            NSMutableArray *value=[[NSMutableArray alloc]init];
+            [value addObject:schedule];
+            resDict[schedule.GameDate]=value;
+        }
+       
+    }
+    return resDict;
+}
+
+
 
 #pragma mark - Table view data source
 
