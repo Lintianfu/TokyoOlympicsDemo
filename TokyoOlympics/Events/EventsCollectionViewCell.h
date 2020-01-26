@@ -1,5 +1,5 @@
 //
-//  EventsViewController.h
+//  EventsCollectionViewCell.h
 //  TokyoOlympics
 //
 //  Created by Mr.TF on 2020/1/26.
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EventsViewController : UIViewController
-
+@interface EventsCollectionViewCell : UICollectionViewCell
+@property(nonatomic,strong)UIImageView *imageview;
 @end
 
 NS_ASSUME_NONNULL_END

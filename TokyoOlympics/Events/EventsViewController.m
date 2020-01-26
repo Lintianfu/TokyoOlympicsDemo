@@ -2,83 +2,31 @@
 //  EventsViewController.m
 //  TokyoOlympics
 //
-//  Created by Mr.TF on 2020/1/23.
+//  Created by Mr.TF on 2020/1/26.
 //  Copyright © 2020 Mr.TF. All rights reserved.
 //
 
 #import "EventsViewController.h"
-
-@interface EventsViewController ()
-
+#import "EventsDetailViewController.h"
+#import "EventsCollectionViewCell.h"
+#import "EventsDAO.h"
+@interface EventsViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+{
+    NSUInteger COL_COUNT;
+}
+@property(nonatomic,strong)NSArray *events;
+@property(nonatomic,strong)UICollectionView *collectionView;
 @end
+
 
 @implementation EventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self InitWithEvents];
+    [self setupCollectionView];
+    // Do any additional setup after loading the view.
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation
@@ -89,5 +37,84 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)InitWithEvents //初始化数据
+{
+    if(self.events==nil||[self.events count]==0)
+    {
+        EventsDAO *dao=[EventsDAO sharedInstance];
+        self.events=[dao findAll];
+        [self.collectionView reloadData];
+    }
+}
+
+    
+-(void)setupCollectionView //初始化流式视图
+{
+    UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc]init];
+    layout.itemSize=CGSizeMake(101,101);
+    layout.sectionInset=UIEdgeInsetsMake(5, 5, 5, 5);
+    layout.minimumInteritemSpacing=1;
+    
+    
+    self.collectionView=[[UICollectionView alloc]initWithFrame:self.view.frame collectionViewLayout:layout];
+    
+    [self.collectionView registerClass:[EventsCollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
+    
+    self.collectionView.backgroundColor=[UIColor whiteColor];
+    
+    self.collectionView.delegate=self;
+    self.collectionView.dataSource=self;
+    [self.view addSubview:self.collectionView];
+    
+    CGSize screenSize=[UIScreen mainScreen].bounds.size;
+    COL_COUNT=screenSize.width/106;
+
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    unsigned long num=[self.events count]%COL_COUNT;
+    if(num==0)
+    {
+        return [self.events count]/COL_COUNT;
+    }
+    else{
+        return [self.events count]/COL_COUNT+1;
+    }
+}
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return COL_COUNT;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    EventsCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    
+    NSInteger idx=indexPath.section*COL_COUNT+indexPath.row;
+    
+    if(idx<[self.events count])
+    {
+        Events *event=self.events[idx];
+        cell.imageview.image=[UIImage imageNamed:event.EventIcon];
+    }
+    else{
+        cell.imageview.image=nil;
+    }
+    return cell;
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger idx=indexPath.section*COL_COUNT+indexPath.row;
+    Events *event=self.events[idx];
+    
+    EventsDetailViewController *detailViewController=[[EventsDetailViewController alloc]init];
+    detailViewController.event=event;
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+
+
+
+
 
 @end

@@ -24,10 +24,11 @@
 		8B3EEA5823D9342F00F70162 /* ScheduleDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEA5723D9342F00F70162 /* ScheduleDAO.m */; };
 		8B3EEAAD23D97FE300F70162 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAAC23D97FE300F70162 /* HomeViewController.m */; };
 		8B3EEAB423D9871100F70162 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAB323D9871100F70162 /* ScheduleViewController.m */; };
-		8B3EEABA23D98D1E00F70162 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAB923D98D1E00F70162 /* EventsViewController.m */; };
 		8B3EEABD23D98D3300F70162 /* EventsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEABC23D98D3300F70162 /* EventsDetailViewController.m */; };
 		8B3EEAC023D98EB300F70162 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEABF23D98EB300F70162 /* CountDownViewController.m */; };
 		8B3EEAC323D98EBE00F70162 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAC223D98EBE00F70162 /* AboutViewController.m */; };
+		8B3EEAC623DD245200F70162 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EEAC523DD245200F70162 /* EventsViewController.m */; };
+		8B6704CD23DD253D004CA04D /* EventsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6704CC23DD253D004CA04D /* EventsCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,14 +61,16 @@
 		8B3EEAAC23D97FE300F70162 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		8B3EEAB223D9871100F70162 /* ScheduleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		8B3EEAB323D9871100F70162 /* ScheduleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
-		8B3EEAB823D98D1E00F70162 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		8B3EEAB923D98D1E00F70162 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		8B3EEABB23D98D3300F70162 /* EventsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsDetailViewController.h; sourceTree = "<group>"; };
 		8B3EEABC23D98D3300F70162 /* EventsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsDetailViewController.m; sourceTree = "<group>"; };
 		8B3EEABE23D98EB300F70162 /* CountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
 		8B3EEABF23D98EB300F70162 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
 		8B3EEAC123D98EBE00F70162 /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		8B3EEAC223D98EBE00F70162 /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		8B3EEAC423DD245200F70162 /* EventsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		8B3EEAC523DD245200F70162 /* EventsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		8B6704CB23DD253D004CA04D /* EventsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventsCollectionViewCell.h; sourceTree = "<group>"; };
+		8B6704CC23DD253D004CA04D /* EventsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +181,12 @@
 		8B3EEAAE23D9861700F70162 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				8B3EEAB823D98D1E00F70162 /* EventsViewController.h */,
-				8B3EEAB923D98D1E00F70162 /* EventsViewController.m */,
 				8B3EEABB23D98D3300F70162 /* EventsDetailViewController.h */,
 				8B3EEABC23D98D3300F70162 /* EventsDetailViewController.m */,
+				8B3EEAC423DD245200F70162 /* EventsViewController.h */,
+				8B3EEAC523DD245200F70162 /* EventsViewController.m */,
+				8B6704CB23DD253D004CA04D /* EventsCollectionViewCell.h */,
+				8B6704CC23DD253D004CA04D /* EventsCollectionViewCell.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -286,8 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3EEABD23D98D3300F70162 /* EventsDetailViewController.m in Sources */,
+				8B6704CD23DD253D004CA04D /* EventsCollectionViewCell.m in Sources */,
+				8B3EEAC623DD245200F70162 /* EventsViewController.m in Sources */,
 				8B3EEA4B23D7E75700F70162 /* Schedule.m in Sources */,
-				8B3EEABA23D98D1E00F70162 /* EventsViewController.m in Sources */,
 				8B3EEAB423D9871100F70162 /* ScheduleViewController.m in Sources */,
 				8B3EEA5523D9336400F70162 /* EventsDAO.m in Sources */,
 				8B3EEA2623D6C33300F70162 /* AppDelegate.m in Sources */,
