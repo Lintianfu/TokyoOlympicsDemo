@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initWithData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -70,24 +71,45 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    NSArray *keys=[self.data allKeys];
+    return [keys count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    NSString *strGameDate=self.arrayGameList[section];
+    NSArray *schedules=self.data[strGameDate];
+    return [schedules count];
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *strGamedate=self.arrayGameList[section];
+    return strGamedate;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    NSArray *strGameDate=self.arrayGameList[indexPath.section];
     
-    // Configure the cell...
+    NSArray *schedules=self.data[strGameDate];
+    Schedule *schedule=schedules[indexPath.row];
     
+    NSString *subtitle=[[NSString alloc]initWithFormat:@"%@ | %@",schedule.GameInfo,schedule.Events.EventName];
+    cell.textLabel.text=schedule.GameTime;
+    cell.detailTextLabel.text=subtitle;
     return cell;
 }
-*/
+-(NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    NSMutableArray *listTitles=[[NSMutableArray alloc]init];
+    for(NSString *item in self.arrayGameList)
+    {
+        NSString *title=[item substringFromIndex:5];
+        [listTitles addObject:title];
+    }
+    return listTitles;
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

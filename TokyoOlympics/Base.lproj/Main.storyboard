@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Schedule-->
         <scene sceneID="qtW-UI-KCC">
             <objects>
                 <tableViewController id="PIr-uX-6FR" customClass="ScheduleViewController" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wrw-JW-kdV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="wrw-JW-kdV">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wrw-JW-kdV" id="4iB-hn-zFm">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="PIr-uX-6FR" id="jaW-tU-ArN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Fyn-m5-5Lm"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="Fyn-m5-5Lm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBf-t3-Nk9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="41" y="-152"/>
         </scene>
-        <!--Events View Controller-->
+        <!--Events-->
         <scene sceneID="ilM-wo-76y">
             <objects>
                 <viewController id="XsI-mK-g4i" customClass="EventsViewController" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6bw-ZB-Lx6"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Mv-rp-N6Z"/>
+                    <navigationItem key="navigationItem" title="Events" id="9Mv-rp-N6Z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MI3-L7-ELP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vh-nN-qKe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-984" y="532"/>
+            <point key="canvasLocation" x="-984.05797101449286" y="531.69642857142856"/>
         </scene>
         <!--About-->
         <scene sceneID="M03-99-Py4">

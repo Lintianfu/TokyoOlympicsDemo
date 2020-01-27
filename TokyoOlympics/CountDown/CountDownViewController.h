@@ -11,7 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CountDownViewController : UIViewController
-
+@property(nonatomic,strong)UIImageView *bgimageview;
+@property(nonatomic,strong)UIImage *image;
+@property(nonatomic,strong)UILabel *datetext;
 @end
 
 NS_ASSUME_NONNULL_END
